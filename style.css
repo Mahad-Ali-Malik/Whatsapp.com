@@ -1,0 +1,536 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body{
+  background-color: #FCF5EB;
+}
+
+/* Navigation bar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav>img{
+    width: 150px;
+}
+
+li>i{
+    margin-left: 5px;
+}
+
+li{
+    position: relative;
+}
+
+li::before{
+    content: "";
+    border-bottom: 2px solid #25D366;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    transform-origin: left;
+}
+
+li:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.btn{
+    width: 170px;
+    height: 50px;
+    border-radius: 100px;
+    border: 1px solid black;
+    font-size: 16px;
+    background-color: #25D366;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: 0.8s ease;
+}
+
+.btn:hover{
+    color: white;
+}
+
+.btn::before{
+    content: "";
+    background-color: #1C1E21;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: -12px;
+    top: 100%;
+    border-radius: 50%;
+    transition: 0.8s ease;
+    z-index: -1;
+}
+
+.btn:hover::before{
+    transform: translateY(-50%) ;
+}
+/* /Navigation bar */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Main section */
+
+
+.main{
+    height: 750px;
+    background-image: url("main\ img.png");
+    background-size: cover;
+    border-radius: 23px;
+    background-position-x: -45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.mainleft{
+    width: 300px;
+    color: white;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mainleft>div>h1{
+    font-size: 70px;
+    line-height: 80px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.mainleft>div>p{
+    font-size: 17px;
+}
+
+.mainright{
+    width: 400px;
+}
+
+.mainright>img{
+    width: 450px;
+}
+
+.mainright>div>img{
+    width: 450px;
+}
+
+.firstmsg, .lastmsg{
+    position: relative;
+}
+
+.heart{
+    position: absolute;
+    left: 0px;
+    top: 20px;
+}
+
+.sad{
+   position: absolute;
+   bottom: -20px;
+   left: 0px;
+}
+
+.goodmorning{
+    animation: goodmorning 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes goodmorning{
+    0%{
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.heart{
+    animation: heart 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes heart{
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.cups{
+    animation: cups 1.2s 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes cups{
+    0%{
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.voice{
+    animation: voice 1.2s 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes voice{
+    0%{
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.happy{
+    animation: happy 1.2s 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes happy{
+    0%{
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.sad{
+    animation: sad 1.2s 2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes sad{
+    0%{
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.trip{
+    animation: trip 1.2s 2.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes trip{
+    0%{
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.paramain{
+    text-align: end;
+    padding-top: 10px;
+    font-size: 12px;
+    color: grey;
+}
+
+.mainsection{
+    margin: 25px;
+}
+/* /Main Section */
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+/* Private Messages */
+
+.privatemsg>img{
+    width: 100%;
+    padding: 0px 25px;
+}
+
+.privatemsg>p{
+    width: 900px;
+    font-size: 43px;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 45px;
+}
+
+/* /Private Messages */
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+/* Video Calling Section */
+
+.container{
+    display: flex;
+    margin: 25px;
+    height: 750px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 100px;
+    gap: 50px;
+}
+
+.containerleft{
+    width: 500px;
+}
+
+.containerleft>h1{
+    font-size: 50px;
+}
+
+.containerleft>p{
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.containerright{
+    position: relative;
+}
+
+.padding{
+    padding: 0px 5%;
+}
+
+.containerbtn{
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #25D366;
+    margin-right: 10px;
+}
+
+/* /Video Calling Section */
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Encryption section */
+
+.one{
+    color: white;
+}
+
+.two{
+    color: #25D366;
+}
+
+.encryption{
+    background-color: #111B21;
+    margin: 0px;
+    color: white;
+}
+
+.encryptionright>button{
+    color: white;
+}
+
+/* /Encryption section */
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Group section */
+
+.abs{
+    width: 100%;
+    position: absolute;
+    top: 13%;
+    left: 0px;
+}
+
+/* /Group Section */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* What you feel section */
+
+.abs2{
+    width: 80%;
+    position: absolute;
+    top: 30%;
+    left: 25px;
+}
+
+/* /What you feel section */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* Footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #111B21;
+    min-height: 550px;
+    padding-top: 120px;
+}
+
+.footerup{
+    width: 1000px;
+    height: 250px;
+    color: white;
+    display: flex;
+}
+
+.box{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.box>a{
+    color: white;
+    display: block;
+}
+
+.box1>img{
+    width: 160px;
+}
+
+.box1{
+    justify-content: space-between;
+    margin-right: 64px;
+}
+
+.box1>button{
+    margin-bottom: 33px;
+}
+
+.footerdown{
+    width: 1020px;
+    height: 130px;
+    color: white;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 40px;
+}
+
+.btn2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #111B21;
+    border: 1px solid white;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn2>i{
+    font-size: 16px;
+    color: white;
+}
+
+.btn2::before{
+    content: "";
+    background-color: #25D366;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    border-radius: 50%;
+    transition: 0.8s ease;
+    z-index: -1;
+}
+
+.btn2:hover::before{
+    transform: translateY(-100%) ;
+}
+
+.btn2:hover>i{
+    color: #111B21; 
+}
+
+.footerdownbox3{
+    display: flex;
+    gap: 20px;
+    padding: 0px 40px;
+}
+
+.footerdownbox4{
+    width: 230px;
+    height: 60px;
+    border: 2px  solid white;
+    border-radius: 100px;
+    padding: 20px;
+    color: white;
+    margin-left: 80px;
+}
+
+.footerdownbox4>i{
+    padding-left: 110px;
+}
+
+/* /Footer */
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
